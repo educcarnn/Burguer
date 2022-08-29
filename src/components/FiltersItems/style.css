@@ -1,0 +1,62 @@
+@media (min-width: 375px) {
+    .Li-Item {
+      width: 18.75rem;
+      height: 21.625rem;
+      margin-left: 1rem;
+      border: 2px solid #E0E0E0;
+    }
+    .Img-Item {
+      width: 256px;
+      height: 185px;
+      background-color: #F5F5F5;
+    }
+    .Ul-Father {
+      display: flex;
+      flex-direction: row;
+      margin-left: -2rem;
+      margin-top: 4rem;
+    }
+    .Space-Span{
+        margin-top: 1rem;
+    }
+    .Div-Information {
+      display: flex;
+      position: absolute;
+      margin-left: 2rem;
+      flex-direction: column;
+      width: 16rem;
+      height: 6rem;
+      justify-content: space-evenly;
+    }
+    .Img-Add{
+      width: 6.625rem;
+      height: 2.5rem;
+      margin-top: 1rem;
+    }
+    .Button-Add{
+      border: none;
+      background-color: transparent;
+      position: absolute;
+      margin-top: 1rem;
+      height: 3.5rem;
+      margin-top: 9rem;
+      border-radius: -2rem;
+      display: flex;
+      align-content: center;
+      justify-content: flex-start;
+    }
+    .Cart-Name {
+      width: 21rem;
+      height: 38rem;
+      background-color: #F5F5F5;
+    }
+    
+  }
+  @media(min-width: 1024px) {
+    .Img-Item {
+      width: 300px;
+      height: 185px;
+      background-color: #F5F5F5;
+    }
+  }
+  
