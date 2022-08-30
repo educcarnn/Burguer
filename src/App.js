@@ -33,9 +33,7 @@ function App() {
       .then((response) => response.json())
       .then((response) => setProducts(response))
       .catch((err) => console.log(err));
-  }, [products]);
-
-  useEffect(() => {
+  }, [products]);useEffect(() => {
     fetch(`https://hamburgueria-kenzie-json-serve.herokuapp.com/products`)
       .then((response) => response.json())
       .then((response) => setFilteredProducts(response))
@@ -43,7 +41,9 @@ function App() {
   }, [filteredProducts]);
 
   return (
-    <>
+
+  
+    <div>
       <Header
         valueFilter={valueFilter}
         setValueFilter={setValueFilter}
@@ -79,7 +79,7 @@ function App() {
         handleRemove={handleRemove}
         setCurrentSale={setCurrentSale}
       ></Cart>
-    </>
+    </div>
   );
 }
 

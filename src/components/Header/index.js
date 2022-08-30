@@ -2,7 +2,7 @@ import "./style.css";
 import BurguerKenzie from "../../Imgs/BurguerKenzie.svg";
 
 
-function Header({setValueFilter, valueFilter}) {
+function Header({setValueFilter}) {
   const filter = (event) => {
     setValueFilter(event.target.value)
   }
