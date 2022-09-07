@@ -5,16 +5,11 @@ function Cart({ currentSale, handleRemove, setCurrentSale }) {
     return (
       <li key={item.id} className="Li-Name">
         <img src={item.img} alt={item.category} className="Img-Name"></img>
-
         <h3 className="h3-name">{item.name}</h3>
         <span className="span-name">{item.category}</span>
-
-        <button
-          onClick={() => handleRemove(item.id)}
-          className="button-item-name"
-        >
-          Remover
-        </button>
+          <button onClick={() => handleRemove(item.id)} className="button-item-name" >
+            Remover
+          </button>
       </li>
     );
   };
@@ -39,16 +34,12 @@ function Cart({ currentSale, handleRemove, setCurrentSale }) {
           <div className="Div-Ul-Father">Carrinho de compras</div>
           <ul className="Ul-Cart">{currentSale.map(itemCart)}</ul>
           <div className="Div-Action">
-            <span className="Span-First-Action">
-              Total
+            <span className="Span-First-Action"> Total
               <span className="Span-Second-Action">
                 R${totalPrice.toFixed(2)}
               </span>
             </span>
-            <button
-              onClick={() => setCurrentSale([])}
-              className="Border-Action"
-            >
+            <button onClick={() => setCurrentSale([])} className="Border-Action">
               Remover Todos
             </button>
           </div>

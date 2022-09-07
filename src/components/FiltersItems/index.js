@@ -1,12 +1,11 @@
 
 import "./style.css";
-import ButtonAdd from "../../Imgs/ButtonAdd.svg";
+//import ButtonAdd from "../../Imgs/ButtonAdd.svg";
 
 function FilterItems({ filteredProducts, itemProduct, valueFilter }) {
   return (
     <>
       <ul className="Ul-Father">
-
         {filteredProducts.filter((searchValue) => {
             if (valueFilter === "") {
               return null;
@@ -17,29 +16,16 @@ function FilterItems({ filteredProducts, itemProduct, valueFilter }) {
               return false
             }
           }).map((filteredProducts) => (
-            <li
-              key={filteredProducts.id}
-              className="Li-Item"
-              itemProduct={itemProduct}
-            >
+            <li key={filteredProducts.id} className="Li-Item" itemProduct={itemProduct}>
               <img
-                src={filteredProducts.img}
-                Alt="Imagem Item"
-                className="Img-Item"
+                src={filteredProducts.img} Alt="Imagem Item" className="Img-Item"
               ></img>
               <div className="Div-Information">
                 <h3>{filteredProducts.name}</h3>
                 <span>{filteredProducts.category}</span>
                 <span className="Space-Span">{filteredProducts.price}</span>
-                <button
-                  className="Button-Add"
-                  onClick={() => itemProduct(filteredProducts)}
-                >
-                  <img
-                    src={ButtonAdd}
-                    alt="Button para adicionar"
-                    className="Img-Add"
-                  ></img>
+                <button className="Button-Add" onClick={() => itemProduct(filteredProducts)}>
+                  Adicionar
                 </button>
               </div>
             </li>

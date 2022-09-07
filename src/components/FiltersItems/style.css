@@ -13,8 +13,7 @@
     .Ul-Father {
       display: flex;
       flex-direction: row;
-      margin-left: -2rem;
-      margin-top: 4rem;
+    
     }
     .Space-Span{
         margin-top: 1rem;

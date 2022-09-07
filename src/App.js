@@ -7,6 +7,7 @@ import Cart from "./components/Cart";
 import FilterItems from "./components/FiltersItems";
 
 function App() {
+
   const [products, setProducts] = useState([]);
   const [valueFilter, setValueFilter] = useState("");
   const [filteredProducts, setFilteredProducts] = useState([]);
@@ -24,7 +25,7 @@ function App() {
 
   const handleRemove = (id) => {
     const listProducts = currentSale.filter((item) => item.id !== id);
-
+    
     setCurrentSale(listProducts);
   };
 
@@ -33,7 +34,9 @@ function App() {
       .then((response) => response.json())
       .then((response) => setProducts(response))
       .catch((err) => console.log(err));
-  }, [products]);useEffect(() => {
+  }, [products]);
+  
+  useEffect(() => {
     fetch(`https://hamburgueria-kenzie-json-serve.herokuapp.com/products`)
       .then((response) => response.json())
       .then((response) => setFilteredProducts(response))
@@ -41,8 +44,6 @@ function App() {
   }, [filteredProducts]);
 
   return (
-
-  
     <div>
       <Header
         valueFilter={valueFilter}
@@ -73,12 +74,15 @@ function App() {
           ></FilterItems>
         </div>
       )}
+      <div>
       <Cart
         itemProduct={itemProduct}
         currentSale={currentSale}
         handleRemove={handleRemove}
         setCurrentSale={setCurrentSale}
       ></Cart>
+      </div>
+      
     </div>
   );
 }

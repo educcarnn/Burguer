@@ -1,5 +1,5 @@
 import "./style.css";
-import ButtonAdd from "../../Imgs/ButtonAdd.svg";
+//import ButtonAdd from "../../Imgs/ButtonAdd.svg";
 
 function ProductList({ products, itemProduct}) {
   const mapItem = (products) => {
@@ -10,16 +10,7 @@ function ProductList({ products, itemProduct}) {
           <h3>{products.name}</h3>
           <span>{products.category}</span>
           <span className="Space-Span">{products.price}</span>
-          <button 
-          className="Button-Add"
-          onClick={() => itemProduct(products)}
-          >
-            <img
-              src={ButtonAdd}
-              alt="Button para adicionar"
-              className="Img-Add"
-            ></img>
-          </button>
+          <button className="Button-Add" onClick={() => itemProduct(products)}>Adicionar</button>
         </div>
       </li>
     );

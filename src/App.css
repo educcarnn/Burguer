@@ -3,45 +3,16 @@
   list-style: none;
 }
 
-@media (min-width: 375px) {
-  .SpanSearch {
-    margin-left: 1rem;
-    position: fixed;
-    margin-top: 0.9rem;
-    font-weight: 700;
-    color: #333333;
-    font-size: 26px;
-  }
-  .ItemSearch {
-    margin-left: 14rem;
-    font-size: 26px;
-    font-weight: 700;
-    margin-top: 0.9rem;
-    color: #828282;
-    position: fixed;
-  }
-}
-@media (min-width: 768px) {
-  .SpanSearch {
-    font-weight: 700;
-    color: #333333;
-  }
-  .ItemSearch {
-    margin-left: 14rem;
-  }
-}
-@media(min-width: 1024px) {
-  .SpanSearch{
-    position: relative;
-  }
-  .ItemSearch{
-    position: relative;
-    margin-left: 0.3rem;
-  }
-    
-}
-
-button {
+button{
   cursor: pointer;
 }
 
+@media (max-width: 800px) {
+  .SpanSearch {
+    font-weight: 700;
+    color: #333333;
+  }
+  .ItemSearch {
+    margin-left: 14rem;
+  }
+}

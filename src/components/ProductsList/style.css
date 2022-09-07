@@ -1,4 +1,20 @@
-@media (min-width: 375px) {
+
+.Ul-Father{
+  max-width: 65%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.Div-Information{
+  display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+}
+
+
+@media (max-width: 800px) {
   .Li-Item {
     width: 18.75rem;
     height: 21.625rem;
@@ -13,15 +29,14 @@
   .Ul-Father {
     display: flex;
     flex-direction: row;
-    margin-left: -2rem;
-    margin-top: 4rem;
-  }
-  .Space-Span{
+    flex-wrap: nowrap;
+    overflow-x: overlay;
+}
+    .Space-Span{
       margin-top: 1rem;
   }
   .Div-Information {
     display: flex;
-    position: absolute;
     margin-left: 2rem;
     flex-direction: column;
     width: 16rem;
@@ -44,22 +59,5 @@
     display: flex;
     align-content: center;
     justify-content: flex-start;
-  }
-}
-
-@media (min-width: 1024px) {
-  .Ul-Father{
-    width: 60rem;
-    
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 48rem;
-    margin-left: 2rem;
-  }
-  .Img-Item {
-    width: 300px;
-    height: 185px;
-    background-color: #F5F5F5;
   }
 }
